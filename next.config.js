@@ -25,11 +25,11 @@ module.exports = withCSS({
       lessLoaderOptions: {
         javascriptEnabled: true,
       },
-      webpack: config => config,
+      webpack: (config) => config,
       rewrites: async () => nextI18NextRewrites(localeSubpaths),
       publicRuntimeConfig: {
         localeSubpaths,
       },
-    })
+    }),
   ),
 })

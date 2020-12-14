@@ -8,7 +8,7 @@ import { persistor, store } from '~/redux/store'
 import '~/styles/antd.less'
 import '~/styles/globals.css'
 
-function MyApp ({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   const Layout = Component.layout || (() => <></>)
   return (
     <Provider store={store}>
@@ -21,12 +21,12 @@ function MyApp ({ Component, pageProps }) {
   )
 }
 
-MyApp.getInitialProps = async appContext => ({
-  ...(await App.getInitialProps(appContext))
+MyApp.getInitialProps = async (appContext) => ({
+  ...(await App.getInitialProps(appContext)),
 })
 
 MyApp.propTypes = {
   Component: PropTypes.func,
-  pageProps: PropTypes.object
+  pageProps: PropTypes.object,
 }
 export default appWithTranslation(MyApp)

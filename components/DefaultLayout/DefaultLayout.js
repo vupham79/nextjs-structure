@@ -1,13 +1,16 @@
-import Link from 'next/link'
+import Footer from './Footer'
+import Header from './Header'
+import './styles.scss'
+import TopPanel from './TopPanel'
 
 function DefaultLayout(props) {
   return (
-    <div>
-      <nav>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-      </nav>
+    <div className="default-layout">
+      <TopPanel />
+      <Header />
       {props.children}
+      <div className="cs-footer" />
+      <Footer />
     </div>
   )
 }

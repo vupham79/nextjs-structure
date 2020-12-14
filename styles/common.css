@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800;900');
+
 :root {
   --body-fs: 13px;
   --body-bg-color: #eeeeee;
-  --body-font: Open Sans, sans-serif;
+  --body-font: 'Open Sans', sans-serif;
   --body-color: #373737;
   --body-line-height: 1.42857143;
   --h1: 36px;
