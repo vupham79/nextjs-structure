@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects'
-import { exampleAction } from '../action'
-import API from '../apis/example'
+import { exampleAction } from '../../actions/example'
+import API from '../../apis/example'
 
 export function * exampleSaga () {
   try {

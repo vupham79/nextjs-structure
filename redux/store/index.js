@@ -2,8 +2,8 @@ import { applyMiddleware, createStore } from 'redux'
 import { persistReducer, persistStore } from 'redux-persist'
 import createWebStorage from 'redux-persist/lib/storage/createWebStorage'
 import createSagaMiddleware from 'redux-saga'
-import rootReducer from './reducers'
-import rootSaga from './sagas'
+import rootReducer from '../reducers'
+import rootSaga from '../sagas'
 
 const createNoopStorage = () => ({
   getItem() {
