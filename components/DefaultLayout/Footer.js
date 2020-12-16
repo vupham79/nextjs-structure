@@ -1,4 +1,5 @@
 import { Col, Row } from 'antd'
+import '~/styles/globals.css'
 import './styles.scss'
 
 const footerRows = [
@@ -50,8 +51,8 @@ function Footer() {
             />
           </div>
           <div className="row">
-            <Row>
-              <Col lg={6} md={24}>
+            <Row justify={'space-between'}>
+              <Col lg={6} md={6} sm={24}>
                 {footerRows.map((row, index) => (
                   <a
                     href={row.href}
@@ -65,8 +66,8 @@ function Footer() {
                   </a>
                 ))}
               </Col>
-              <Col lg={2} md={0} />
-              <Col lg={4} md={24}>
+              <Col lg={2} md={2} sm={0} />
+              <Col lg={4} md={4} sm={24}>
                 <div className="widget">
                   <div className="widget-title">TÀI KHOẢN</div>
                   <ul className="widget-menu">
@@ -81,7 +82,7 @@ function Footer() {
                     </li>
                   </ul>
                 </div>
-                <div className="widget">
+                <div className="widget mt1">
                   <div className="widget-title">THÔNG TIN</div>
                   <ul className="widget-menu">
                     <li>
@@ -93,8 +94,7 @@ function Footer() {
                   </ul>
                 </div>
               </Col>
-              <Col lg={1} md={0} />
-              <Col lg={5} md={24}>
+              <Col lg={5} md={5} sm={24}>
                 <div className="widget">
                   <div className="widget-title">HỖ TRỢ</div>
                   <ul className="widget-menu">
@@ -127,16 +127,26 @@ function Footer() {
                   </ul>
                 </div>
               </Col>
-              <Col lg={1} md={0} />
-              <Col lg={5} md={24}>
+              <Col lg={5} md={5} sm={24}>
                 <div className="widget">
                   <div className="widget-title">KẾT NỐI VỚI FOODMAP</div>
                   <a target="_blank" rel="noreferrer" href="https://www.facebook.com/Foodmap.asia">
-                    <img
+                    {/* <img
                       style={{ width: '100%' }}
                       data-lazy-type="image"
                       data-lazy-src="https://food-map.s3.ap-southeast-1.amazonaws.com/storage/media/EtNErBtYlmuS6bW0TEjbrTNzMABKHGECmnSR23Ri.jpeg"
                       src="https://food-map.s3.ap-southeast-1.amazonaws.com/storage/media/EtNErBtYlmuS6bW0TEjbrTNzMABKHGECmnSR23Ri.jpeg"
+                    /> */}
+                    <div
+                      style={{ width: '100%' }}
+                      className="fb-page"
+                      data-href="https://www.facebook.com/Foodmap.asia/"
+                      data-width=""
+                      data-height=""
+                      data-small-header="false"
+                      data-adapt-container-width="true"
+                      data-hide-cover="false"
+                      data-show-facepile="true"
                     />
                   </a>
                   <Row className="widget-connect">

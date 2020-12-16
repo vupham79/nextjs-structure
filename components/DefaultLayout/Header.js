@@ -1,8 +1,10 @@
-import { faBell, faMap, faUserCircle } from '@fortawesome/free-regular-svg-icons'
-import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Col, Input, Row } from 'antd'
 import Link from 'next/link'
+import CartIcon from '~/assets/svg/cart.svg'
+import SearchIcon from '~/assets/svg/search-2.svg'
+import TrackingOrderIcon from '~/assets/svg/t2.svg'
+import NotificationIcon from '~/assets/svg/t3.svg'
+import SaleFoodmapIcon from '~/assets/svg/t4.svg'
 import './styles.scss'
 
 function Header() {
@@ -21,30 +23,30 @@ function Header() {
           <Col lg={6}>
             <Input
               placeholder="Nhập nội dung tìm kiếm"
-              suffix={<FontAwesomeIcon color="#0a923c" icon={faSearch} />}
+              suffix={<SearchIcon className="search-icon" />}
             />
           </Col>
           <Col style={{ display: 'flex', alignItems: 'center' }}>
             <div className="group-item">
-              <FontAwesomeIcon style={{ fontSize: '24px' }} icon={faMap} />
+              <TrackingOrderIcon className="icon" />
               <span className="title">Theo dõi đơn hàng</span>
             </div>
           </Col>
           <Col style={{ display: 'flex', alignItems: 'center' }}>
             <div className="group-item">
-              <FontAwesomeIcon style={{ fontSize: '24px' }} icon={faBell} />
+              <NotificationIcon className="icon" />
               <span className="title">Thông báo mới nhận</span>
             </div>
           </Col>
           <Col style={{ display: 'flex', alignItems: 'center' }}>
             <div className="group-item">
-              <FontAwesomeIcon style={{ fontSize: '24px' }} icon={faUserCircle} />
+              <SaleFoodmapIcon className="icon" />
               <span className="title">Sale Foodmap</span>
             </div>
           </Col>
           <Col style={{ display: 'flex', alignItems: 'center' }}>
             <div className="widget-mini-cart">
-              <FontAwesomeIcon style={{ fontSize: '24px' }} icon={faShoppingCart} />
+              <CartIcon className="icon" />
               <span className="title">Giỏ hàng</span>
               <span className="count">2</span>
             </div>

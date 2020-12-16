@@ -25,7 +25,17 @@ module.exports = withCSS({
       lessLoaderOptions: {
         javascriptEnabled: true,
       },
-      webpack: (config) => config,
+      webpack: (config) => {
+        config.module.rules.push({
+          test: /\.svg$/,
+          issuer: {
+            test: /\.(js|ts)x?$/,
+          },
+          use: ['@svgr/webpack'],
+        })
+
+        return config
+      },
       rewrites: async () => nextI18NextRewrites(localeSubpaths),
       publicRuntimeConfig: {
         localeSubpaths,

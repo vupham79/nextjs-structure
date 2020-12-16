@@ -1,5 +1,6 @@
 import Footer from './Footer'
 import Header from './Header'
+import MainMenu from './MainMenu'
 import './styles.scss'
 import TopPanel from './TopPanel'
 
@@ -8,6 +9,7 @@ function DefaultLayout(props) {
     <div className="default-layout">
       <TopPanel />
       <Header />
+      <MainMenu />
       {props.children}
       <div className="cs-footer" />
       <Footer />
