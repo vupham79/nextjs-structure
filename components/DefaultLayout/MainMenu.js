@@ -325,9 +325,9 @@ function MainMenu() {
               </ul>
             </li>
             <li className="sec-menu">
-              <a className="title">
-                <span>Food Channel</span>
-              </a>
+              <Link href="/news">
+                <span className="title">Ngon lành TV</span>
+              </Link>
             </li>
           </ul>
         </nav>

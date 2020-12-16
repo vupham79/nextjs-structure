@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import CheckoutLayout from '~/components/CheckoutLayout'
+import DefaultLayout from '~/components/DefaultLayout'
 import { withTranslation } from '~/i18n'
-function About({ t }) {
+
+function News({ t }) {
   return (
     <>
       <Head>
@@ -10,17 +11,20 @@ function About({ t }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div>
-        <h1>{t('title')}</h1>
+        <h1>{t('title')} Helllo world</h1>
       </div>
     </>
   )
 }
 
-About.getInitialProps = async () => ({
-  namespacesRequired: ['about'],
+News.getInitialProps = async () => ({
+  namespacesRequired: ['news'],
 })
-About.propTypes = {
+
+News.propTypes = {
   t: PropTypes.func.isRequired,
 }
-About.layout = CheckoutLayout
-export default withTranslation('about')(About)
+
+News.layout = DefaultLayout
+
+export default withTranslation('news')(News)

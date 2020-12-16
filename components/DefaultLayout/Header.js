@@ -14,37 +14,34 @@ function Header() {
         <Row justify={'space-between'}>
           <Col lg={6}>
             <Link href="/">
-              <img
-                style={{ maxHeight: '28px' }}
-                src="https://food-map.s3.amazonaws.com/assets/images/logo.png"
-              />
+              <img id="logo" src="https://food-map.s3.amazonaws.com/assets/images/logo.png" />
             </Link>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} md={0} sm={0} xs={0}>
             <Input
               placeholder="Nhập nội dung tìm kiếm"
               suffix={<SearchIcon className="search-icon" />}
             />
           </Col>
-          <Col style={{ display: 'flex', alignItems: 'center' }}>
+          <Col className="header-item">
             <div className="group-item">
               <TrackingOrderIcon className="icon" />
               <span className="title">Theo dõi đơn hàng</span>
             </div>
           </Col>
-          <Col style={{ display: 'flex', alignItems: 'center' }}>
+          <Col md={0} sm={0} xs={0} className="header-item header-notification">
             <div className="group-item">
               <NotificationIcon className="icon" />
               <span className="title">Thông báo mới nhận</span>
             </div>
           </Col>
-          <Col style={{ display: 'flex', alignItems: 'center' }}>
+          <Col className="header-item">
             <div className="group-item">
               <SaleFoodmapIcon className="icon" />
               <span className="title">Sale Foodmap</span>
             </div>
           </Col>
-          <Col style={{ display: 'flex', alignItems: 'center' }}>
+          <Col className="header-item">
             <div className="widget-mini-cart">
               <CartIcon className="icon" />
               <span className="title">Giỏ hàng</span>
