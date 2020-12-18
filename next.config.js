@@ -15,11 +15,11 @@ if (typeof require !== 'undefined') {
 }
 
 module.exports = withCSS({
-  cssModules: true,
-  cssLoaderOptions: {
-    importLoaders: 1,
-    localIdentName: '[local]___[hash:base64:5]',
-  },
+  // cssModules: true,
+  // cssLoaderOptions: {
+  //   importLoaders: 1,
+  //   localIdentName: '[local]___[hash:base64:5]',
+  // },
   ...withLess(
     withSass({
       lessLoaderOptions: {
@@ -33,15 +33,6 @@ module.exports = withCSS({
           },
           use: ['@svgr/webpack'],
         })
-        config.module.rules.push({
-          test: /\.(png|jpe?g|gif)$/i,
-          use: [
-            {
-              loader: 'file-loader',
-            },
-          ],
-        })
-
         return config
       },
       rewrites: async () => nextI18NextRewrites(localeSubpaths),

@@ -420,6 +420,11 @@
   #header #logo {
     max-height: 40px !important;
   }
+  #header {
+    .container {
+      margin: 0 1rem !important;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -431,4 +436,13 @@
       margin-top: 1rem;
     }
   }
+  #header {
+    .container {
+      margin: 0 1rem !important;
+    }
+  }
+}
+
+.mt1 {
+  margin-top: 1rem;
 }

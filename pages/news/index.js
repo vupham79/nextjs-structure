@@ -2,29 +2,27 @@ import Head from 'next/head'
 import PropTypes from 'prop-types'
 import DefaultLayout from '~/components/DefaultLayout'
 import { withTranslation } from '~/i18n'
-
-function News({ t }) {
+import NewsSection from './News'
+function Index({ t }) {
   return (
     <>
       <Head>
         <title>{t('header')}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div>
-        <h1>{t('title')} Helllo world</h1>
-      </div>
+      <NewsSection />
     </>
   )
 }
 
-News.getInitialProps = async () => ({
+Index.getInitialProps = async () => ({
   namespacesRequired: ['news'],
 })
 
-News.propTypes = {
+Index.propTypes = {
   t: PropTypes.func.isRequired,
 }
 
-News.layout = DefaultLayout
+Index.layout = DefaultLayout
 
-export default withTranslation('news')(News)
+export default withTranslation('news')(Index)

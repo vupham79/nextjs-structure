@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400');
 
 :root {
   --body-fs: 13px;
@@ -15,8 +16,4 @@
   --cl1: #10723a;
   --cl2: #0a923c;
   --cl3: #10723a;
-}
-
-.mt1 {
-  margin-top: 1rem;
 }

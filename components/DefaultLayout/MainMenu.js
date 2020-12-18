@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import ArrowRightIcon from '~/assets/svg/arrow-2.svg'
+import ArrowRightIcon from '~/assets/svg/arrow-right.svg'
 import ArrowDownIcon from '~/assets/svg/select.svg'
 import MenuIcon from '~/assets/svg/t15.svg'
 import './styles.scss'
@@ -210,12 +210,12 @@ function MainMenu() {
                 </li>
                 <li>
                   <a href="#">
-                    Sub-Section1 4<ArrowRightIcon width="8px" />
+                    Sub-Section1 4<ArrowRightIcon fill="#fff" width="8px" />
                   </a>
                   <ul id="menu-layer" className="nested-submenu">
                     <li>
                       <a href="#">
-                        Sub-Section1 1<ArrowRightIcon width="8px" />
+                        Sub-Section1 1<ArrowRightIcon fill="#fff" width="8px" />
                       </a>
                       <ul id="menu-layer" className="nested-submenu">
                         <li>

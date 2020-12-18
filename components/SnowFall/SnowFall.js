@@ -28,7 +28,7 @@ function snow() {
 
   var flakes = document.getElementsByClassName('flake')
   for (var i = 0; i < flakes.length; i++) {
-    if (flakes[i].getBoundingClientRect().top > window.innerHeight) {
+    if (flakes[i].getBoundingClientRect().top > (window.innerHeight * 80) / 100) {
       flakes[i].remove()
     }
   }

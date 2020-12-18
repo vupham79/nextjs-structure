@@ -1,0 +1,119 @@
+.product-box {
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  .banner-box {
+    cursor: pointer;
+    position: relative;
+    .banner-wrapper {
+      overflow: hidden;
+    }
+    .banner-image {
+      width: 100%;
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    .content {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      color: #fff;
+      z-index: 99;
+      .title {
+        background: none !important;
+        padding: 0;
+        color: #fff;
+        margin-bottom: 5px;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .category {
+        font-size: 14px;
+      }
+      .price span {
+        color: #fff;
+        margin-right: 10px;
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .price span:nth-child(2) {
+        text-decoration-line: line-through;
+        font-size: 14px;
+        color: #373737;
+        font-weight: 400;
+      }
+    }
+  }
+  .banner-box:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    z-index: 1;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0));
+  }
+  .banner-box:hover {
+    .banner-image {
+      transform: scale(1.1);
+    }
+  }
+
+  .card-box {
+    cursor: pointer;
+    clear: both;
+    .banner-wrapper {
+      overflow: hidden;
+      width: 40%;
+      float: left;
+    }
+    .banner-image {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      color: #373737;
+      width: 60%;
+      float: left;
+      .title {
+        background: none;
+        padding: 0;
+        margin-bottom: 5px;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: initial;
+        color: #373737;
+      }
+      .category {
+        font-size: 14px;
+      }
+      .price span {
+        color: #10723a;
+        margin-right: 10px;
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .price span:nth-child(2) {
+        text-decoration-line: line-through;
+        font-size: 14px;
+        color: #373737;
+        font-weight: 400;
+      }
+    }
+  }
+  .card-box:hover {
+    .banner-image {
+      transform: scale(1.1);
+    }
+  }
+}
