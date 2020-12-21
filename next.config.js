@@ -15,21 +15,30 @@ if (typeof require !== 'undefined') {
 }
 
 module.exports = withCSS({
-  cssModules: true,
-  cssLoaderOptions: {
-    importLoaders: 1,
-    localIdentName: '[local]___[hash:base64:5]',
-  },
+  // cssModules: true,
+  // cssLoaderOptions: {
+  //   importLoaders: 1,
+  //   localIdentName: '[local]___[hash:base64:5]',
+  // },
   ...withLess(
     withSass({
       lessLoaderOptions: {
         javascriptEnabled: true,
       },
-      webpack: config => config,
+      webpack: (config) => {
+        config.module.rules.push({
+          test: /\.svg$/,
+          issuer: {
+            test: /\.(js|ts)x?$/,
+          },
+          use: ['@svgr/webpack'],
+        })
+        return config
+      },
       rewrites: async () => nextI18NextRewrites(localeSubpaths),
       publicRuntimeConfig: {
         localeSubpaths,
       },
-    })
+    }),
   ),
 })

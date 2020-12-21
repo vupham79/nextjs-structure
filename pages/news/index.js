@@ -1,26 +1,28 @@
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import CheckoutLayout from '~/components/CheckoutLayout'
+import DefaultLayout from '~/components/DefaultLayout'
 import { withTranslation } from '~/i18n'
-function About({ t }) {
+import NewsSection from './News'
+function Index({ t }) {
   return (
     <>
       <Head>
         <title>{t('header')}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div>
-        <h1>{t('title')}</h1>
-      </div>
+      <NewsSection />
     </>
   )
 }
 
-About.getInitialProps = async () => ({
-  namespacesRequired: ['about'],
+Index.getInitialProps = async () => ({
+  namespacesRequired: ['news'],
 })
-About.propTypes = {
+
+Index.propTypes = {
   t: PropTypes.func.isRequired,
 }
-About.layout = CheckoutLayout
-export default withTranslation('about')(About)
+
+Index.layout = DefaultLayout
+
+export default withTranslation('news')(Index)
