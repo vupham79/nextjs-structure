@@ -6,7 +6,6 @@ body {
   margin: 0;
   font-family: var(--body-font);
   background-color: var(--body-bg-color);
-  background-color: #c6e6f1;
 }
 
 a {
